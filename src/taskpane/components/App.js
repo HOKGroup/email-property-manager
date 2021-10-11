@@ -17,8 +17,7 @@ export default class App extends React.Component {
     this.state = {
         listItems: [],
         customProps: null,
-        item: null,
-        item_holder: null
+        item: null
     };
   }
 

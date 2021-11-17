@@ -28,7 +28,7 @@
       </DesktopSettings>
     </Form>
   </FormSettings>
-  <Permissions>ReadWriteItem</Permissions>
+  <Permissions>ReadWriteMailbox</Permissions>
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
   </Rule>
@@ -80,6 +80,44 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
+			
+		  <ExtensionPoint xsi:type="MessageComposeCommandSurface">
+			  <OfficeTab id="TabDefault">
+				  <Group id="msgComposeCmdGroup">
+					  <Label resid="GroupLabel2"/>
+					  <Control xsi:type="Button" id="msgComposeInsertGist">
+						  <Label resid="TaskpaneButton2.Label"/>
+						  <Supertip>
+							  <Title resid="TaskpaneButton2.Title"/>
+							  <Description resid="TaskpaneButton2.Tooltip"/>
+						  </Supertip>
+						  <Icon>
+							  <bt:Image size="16" resid="Icon.16x16"/>
+							  <bt:Image size="32" resid="Icon.32x32"/>
+							  <bt:Image size="80" resid="Icon.80x80"/>
+						  </Icon>
+						  <Action xsi:type="ShowTaskpane">
+							  <SourceLocation resid="Taskpane.Url"/>
+						  </Action>
+					  </Control>
+					  <Control xsi:type="Button" id="msgComposeInsertDefaultGist">
+						  <Label resid="FunctionButton2.Label"/>
+						  <Supertip>
+							  <Title resid="FunctionButton2.Title"/>
+							  <Description resid="FunctionButton2.Tooltip"/>
+						  </Supertip>
+						  <Icon>
+							  <bt:Image size="16" resid="Icon.16x16"/>
+							  <bt:Image size="32" resid="Icon.32x32"/>
+							  <bt:Image size="80" resid="Icon.80x80"/>
+						  </Icon>
+						  <Action xsi:type="ExecuteFunction">
+							  <FunctionName>insertMetaData</FunctionName>
+						  </Action>
+					  </Control>
+				  </Group>
+			  </OfficeTab>
+		  </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
     </Hosts>
@@ -94,13 +132,20 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Contoso Add-in"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
+        <bt:String id="GroupLabel" DefaultValue="Read MetaData"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Read MetaData"/>
         <bt:String id="ActionButton.Label" DefaultValue="Perform an action"/>
+		<bt:String id="GroupLabel2" DefaultValue="Insert MetaData"/>
+		<bt:String id="TaskpaneButton2.Label" DefaultValue="Insert MetaData"/>
+		<bt:String id="TaskpaneButton2.Title" DefaultValue="Insert MetaData"/>
+		<bt:String id="FunctionButton2.Label" DefaultValue="Perform an action"/>
+		<bt:String id="FunctionButton2.Title" DefaultValue="Perform an action"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying all available properties."/>
         <bt:String id="ActionButton.Tooltip" DefaultValue="Perform an action when clicked."/>
+		<bt:String id="TaskpaneButton2.Tooltip" DefaultValue="Defined customized metadata to current email item."/>
+		<bt:String id="FunctionButton2.Tooltip" DefaultValue="Action to be defined."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

@@ -1,4 +1,4 @@
-ÿþ# email-property-manager
+# email-property-manager
 
 # Install
 launch outlook -> click file button at top bar -> click Manage-Add-ins button -> click "My add-ins" <br />

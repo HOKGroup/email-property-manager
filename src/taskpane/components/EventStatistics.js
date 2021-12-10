@@ -28,28 +28,16 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     },
 }));
 
-function createData(name, value) {
-    return {name, value};
-}
-
-const rows = [
-    createData('Frozen yoghurt', 159),
-    createData('Ice cream sandwich', 237),
-    createData('Eclair', 262),
-    createData('Cupcake', 305),
-    createData('Gingerbread', 356),
-];
-
-function CustomizedTables(props) {
-    const keys = props.keys;
+export default function EventStatistics(props) {
+    const { keys } = props;
     console.log(keys);
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 300 }} aria-label="customized table">
                 <TableHead>
                     <TableRow>
-                        <StyledTableCell align="center">Custom Properties</StyledTableCell>
-                        <StyledTableCell align="center">Values</StyledTableCell>
+                        <StyledTableCell align="center">Meetings</StyledTableCell>
+                        <StyledTableCell align="center">Duration(minutes)</StyledTableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -64,5 +52,3 @@ function CustomizedTables(props) {
         </TableContainer>
     );
 }
-
-export default CustomizedTables;

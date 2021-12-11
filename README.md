@@ -10,11 +10,11 @@ In the project directory, run "npm start" to start dev serve on port 3000 <br />
 Once it's launched, an add-in button will appear on top bar.
 
 # Main Functionality
--Add/Delete new Project to ProjectList
+- Add/Delete new Project to ProjectList
 (The projectList information was stored as MultiValueExtendedProperty under property name "myTest" of drafts mail folder).
--Initiate a new Email with SingleValueExtendedProperty under property name "myTest" associated with new mail item.
--Initiate a new Event Appointment with ProjectName & ProjectNumber as part of Event subject.
--Report Time duration of each listed project for selected time span.
+- Initiate a new Email with SingleValueExtendedProperty under property name "myTest" associated with new mail item.
+- Initiate a new Event Appointment with ProjectName & ProjectNumber as part of Event subject.
+- Report Time duration of each listed project for selected time span.
 
 # To Do List
 - Code Style

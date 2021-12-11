@@ -1,6 +1,13 @@
 # email-property-manager
 
+![](web/emailpropertymanagerpreview.png)
+
+
+
+
+
 # Install
+
 launch outlook -> click file button at top bar -> click Manage-Add-ins button -> click "My add-ins" <br />
 under "Custom add-ins click "Add a custom add-in" -> attach manifest.xml file from the package <br />
 
@@ -26,4 +33,3 @@ Once it's launched, an add-in button will appear on top bar.
 - Functionality & Performance
   1. authToken is being fetch every time before function call. Suggest store it as app state and refresh it only when token expires.
   2. Reporting function is based on parsing of event subject using regex. But Miscrosfot Rest API only returns 10 items every call by default. Suggest solving the pagnation issue when dealing with longer time span with more events as return. 
-  
